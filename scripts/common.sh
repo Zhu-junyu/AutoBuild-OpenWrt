@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # 移除package
-find . -maxdepth 4 -iname "*adguardhome*" -type d | xargs rm -rf
 find . -maxdepth 4 -iname "*advanced*" -type d | xargs rm -rf
 find . -maxdepth 4 -iname "*aliyundrive*" -type d | xargs rm -rf
 find . -maxdepth 4 -iname "*amlogic*" -type d | xargs rm -rf
@@ -17,9 +16,7 @@ find . -maxdepth 4 -iname "*music*" -type d | xargs rm -rf
 find . -maxdepth 4 -iname "*netdata*" -type d | xargs rm -rf
 find . -maxdepth 4 -iname "*onliner*" -type d | xargs rm -rf
 find . -maxdepth 4 -iname "*openclash*" -type d | xargs rm -rf
-find . -maxdepth 4 -iname "*passwall*" -type d | xargs rm -rf
 find . -maxdepth 4 -iname "*pushbot*" -type d | xargs rm -rf
-find . -maxdepth 4 -iname "*qbittorrent*" -type d | xargs rm -rf
 find . -maxdepth 4 -iname "*serverchan*" -type d | xargs rm -rf
 find . -maxdepth 4 -iname "*shadowsocks*" -type d | xargs rm -rf
 find . -maxdepth 4 -iname "*speedtest*" -type d | xargs rm -rf
@@ -109,10 +106,6 @@ sed -i 's/network/control/g' package/luci-app-eqos/luasrc/controller/*.lua
 sed -i 's/services/nas/g' package/luci-app-aliyundrive-fuse/luasrc/controller/*.lua
 sed -i 's/services/nas/g' package/luci-app-aliyundrive-fuse/luasrc/model/cbi/aliyundrive-fuse/*.lua
 sed -i 's/services/nas/g' package/luci-app-aliyundrive-fuse/luasrc/view/aliyundrive-fuse/*.htm
-sed -i 's/services/vpn/g' package/luci-app-openclash/luasrc/*.lua
-sed -i 's/services/vpn/g' package/luci-app-openclash/luasrc/controller/*.lua
-sed -i 's/services/vpn/g' package/luci-app-openclash/luasrc/model/cbi/openclash/*.lua
-sed -i 's/services/vpn/g' package/luci-app-openclash/luasrc/view/openclash/*.htm
 sed -i 's|admin/network|admin/control|g' feeds/luci/applications/luci-app-sqm/root/usr/share/luci/menu.d/*.json
 sed -i 's|admin/network|admin/nlbw|g' package/luci-app-wrtbwmon/root/usr/share/luci/menu.d/*.json
 sed -i 's|admin/services|admin/|g' feeds/luci/applications/luci-app-nlbwmon/root/usr/share/luci/menu.d/*.json
@@ -147,5 +140,5 @@ sed -i 's/"挂载 SMB 网络共享"/"挂载共享"/g' `grep "挂载 SMB 网络�
 sed -i 's/"易有云文件管理器"/"易有云"/g' `grep "易有云文件管理器" -rl ./`
 sed -i 's/"网络存储"/"存储"/g' `grep "网络存储" -rl ./`
 sed -i 's/"联机用户"/"在线用户"/g' `grep "联机用户" -rl ./`
-sed -i 's/"解除网易云音乐播放限制"/"音乐解锁"/g' `grep "解除网易云音乐播放限制" -rl ./`
+sed -i 's/"解除网易云音乐播放限制"/"网易云音乐解锁"/g' `grep "解除网易云音乐播放限制" -rl ./`
 sed -i 's/"阿里云盘 FUSE"/"阿里云盘"/g' `grep "阿里云盘 FUSE" -rl ./`
