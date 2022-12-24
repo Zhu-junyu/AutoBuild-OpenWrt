@@ -29,6 +29,7 @@ find . -maxdepth 4 -iname "*vssr*" -type d | xargs rm -rf
 find . -maxdepth 4 -iname "*wizard*" -type d | xargs rm -rf
 find . -maxdepth 4 -iname "*wrtbwmon*" -type d | xargs rm -rf
 find . -maxdepth 4 -iname "*xray*" -type d | xargs rm -rf
+rm -rf ./package/feeds/luci/luci-app-passwall
 
 # 添加package
 git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
@@ -62,6 +63,8 @@ svn co https://github.com/messense/aliyundrive-fuse/trunk/openwrt/aliyundrive-fu
 svn co https://github.com/messense/aliyundrive-fuse/trunk/openwrt/luci-app-aliyundrive-fuse package/luci-app-aliyundrive-fuse
 svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/luci-app-amlogic
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
+svn co https://github.com/nantayo/passwall/trunk package/passwall
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-alist package/luci-app-alist
 
 # samba解除root限制
 sed -i 's/invalid users = root/#&/g' feeds/packages/net/samba4/files/smb.conf.template
@@ -139,4 +142,4 @@ sed -i 's/"易有云文件管理器"/"易有云"/g' `grep "易有云文件管理
 sed -i 's/"网络存储"/"存储"/g' `grep "网络存储" -rl ./`
 sed -i 's/"联机用户"/"在线用户"/g' `grep "联机用户" -rl ./`
 sed -i 's/"解除网易云音乐播放限制"/"网易云音乐解锁"/g' `grep "解除网易云音乐播放限制" -rl ./`
-sed -i 's/"阿里云盘 FUSE"/"阿里云盘"/g' `grep "阿里云盘 FUSE" -rl ./`
+sed -i 's/"阿里云盘 FUSE"/"阿里云盘' `grep "阿里云盘 FUSE" -rl ./`
