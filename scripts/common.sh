@@ -63,7 +63,7 @@ svn co https://github.com/messense/aliyundrive-fuse/trunk/openwrt/aliyundrive-fu
 svn co https://github.com/messense/aliyundrive-fuse/trunk/openwrt/luci-app-aliyundrive-fuse package/luci-app-aliyundrive-fuse
 svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/luci-app-amlogic
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
-svn co https://github.com/nantayo/passwall/trunk package/passwall
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-passwall package/passwall
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-alist package/luci-app-alist
 
 # samba解除root限制
